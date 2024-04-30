@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 10px;
+    background-color: rgba(197, 252, 195, 0.293);
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    scale: 0.9;
+    transition: 0.5s;
+    margin: 10px auto;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    /* border: 3px solid black; */
+    height: 100px;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+header:hover, footer:hover, main:hover {
+    scale: 1;
+}
+
+.logo img {
+    height: 80px;
+}
+
+.social img, nav img{
+    height: 3rem;
+}
+
+.header-info, header ul, .social, footer ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.social ul {
+    flex-direction: row-reverse;
+}
+
+.header-info , .f-info{
+    gap: 40px;
+    font-size: 1.8rem;
+}
+
+.header-info a, .f-info a{
+    color: black;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.header-info a:hover , .f-info a:hover{
+    color: rgb(176, 243, 114);
+    scale: 1.2;
+
+}
+
+main{
+    text-align: center;
+    scale: 0.9;
+    transition: 0.5s;
+    margin: 10px auto;
+    border-radius: 20px;
+    background-color: white;
+
+    padding: 50px 7%;
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+main>div {
+    padding: 4rem 0 ;
+}
+
+.m-title, .f-title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.main-info img {
+    width: 35%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.m-content {
+    margin: 0 auto;
+    width: 50%;
+    font-size: 2rem;
+    padding: 15px;
+}
+
+.m_card-holder {
+
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 5%;
+}
+
+.m-card{
+    margin-bottom: 20px;
+    flex-basis: 35%;
+    background-color: white;
+    padding: 0 35px 35px;
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.m-card__proj {
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 20px;
+    background-color: rgba(229, 250, 180, 0.875);
+}
+
+.m-card:hover {
+    background-color: rgba(143, 143, 143, 0.147);
+    scale: 1.1;
+}
+
+.mc-title {
+    padding: 25px 0 ;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: rgb(181, 110, 247);
+}
+
+.mc-content {
+    font-size: 1.7rem;
+}
+
+footer{
+    scale: 0.9;
+    transition: 0.5s;
+    margin: 10px auto;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    /* border: 3px solid black; */
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 7%;
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.footer-container, .f-info{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mc-p__icon img {
+    object-fit: cover;
+    width: 35rem;
+    height: 25rem;
+
+    border-radius: 20px;
+}
+
+.mc-p__text {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-top: 20px;
+}
+
+.m-cards-holder {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.burgerbar {
+    display: none;
+}
+
+.f-title {
+    text-align: center;
+}
+
+@media screen 
+and (min-width: 768px) 
+and (max-width: 1023px)
+{
+
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    html {
+        font-size: 8px;
+    }
+
+    .burgerbar {
+        display: block;
+    }
+    header nav ul{
+        display: none;
+    }
+
+    header, main, footer {
+        scale: 1;
+    }
+
+    .m-content {
+        width: 80%;
+    }
+    .main-info img {
+        width: 70%;
+    }
+
+    .m_card-holder {
+        flex-wrap: wrap;
+     
+    }
+    .main-info {
+        padding-bottom: 30px;
+    }
+    main>div {
+       padding: 0; 
+    }
+
+    .m-card {
+        flex-basis: 80%;
+    }
+    
+    .header-info {
+        flex-direction: row-reverse;
+    }
+
+    header .social ul {
+        display: block;
+    }
+
+    .mc-p__icon img {
+        width: 100%;
+    }
+    .m-card__proj {
+        flex-basis: 70%;
+    }
+}
